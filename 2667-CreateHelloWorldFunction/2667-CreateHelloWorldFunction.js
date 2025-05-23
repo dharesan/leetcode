@@ -1,16 +1,19 @@
-// Last updated: 23/05/2025, 21:12:14
+// Last updated: 23/05/2025, 21:24:55
 /**
- * @return {Function}
+ * @param {number} n
+ * @return {Function} counter
  */
-var createHelloWorld = function() {
-    
-    return function(...args) {
-        return "Hello World";
-        
-    }
+var createCounter = function(n) {
+
+    return function() {
+        console.log(n)
+        return n++
+    };
 };
 
-/**
- * const f = createHelloWorld();
- * f(); // "Hello World"
+/** 
+ * const counter = createCounter(10)
+ * counter() // 10
+ * counter() // 11
+ * counter() // 12
  */

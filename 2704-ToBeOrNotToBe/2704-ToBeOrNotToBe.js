@@ -1,28 +1,32 @@
-// Last updated: 24/05/2025, 01:09:56
+// Last updated: 24/05/2025, 12:33:30
 /**
- * @param {string} val
- * @return {Object}
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
  */
-var expect = function(val) {
-    var toBe = function(val2) { 
-        if (val === val2) { 
-            return true; 
-        } 
-        throw new Error ("Not Equal")
-    };
+var createCounter = function(init) {
+    let count = init; 
+    const original = init; 
+
+    var increment = function(){ 
+        return ++count; 
+    }
+
+    var decrement = function (){
+        return --count; 
+    }
+
+    var reset = function (){ 
+        count = original; 
+        return original; 
+    }
     
-    var notToBe = function(val2){
-        if (val !== val2) { 
-            return true;
-        }
-        throw new Error("Equal")
-    };
-
-    return {toBe,notToBe};
-
+    return {increment,decrement, reset}; 
+    
 };
 
 /**
- * expect(5).toBe(5); // true
- * expect(5).notToBe(5); // throws "Equal"
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
  */

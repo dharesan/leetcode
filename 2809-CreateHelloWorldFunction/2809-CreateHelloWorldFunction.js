@@ -1,0 +1,16 @@
+// Last updated: 24/05/2025, 12:53:11
+/**
+ * @return {Function}
+ */
+var createHelloWorld = function() {
+    
+    return function(...args) {
+        return "Hello World";
+        
+    }
+};
+
+/**
+ * const f = createHelloWorld();
+ * f(); // "Hello World"
+ */

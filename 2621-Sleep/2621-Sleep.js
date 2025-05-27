@@ -1,19 +1,19 @@
-// Last updated: 27/05/2025, 13:31:13
+// Last updated: 27/05/2025, 13:43:30
 /**
  * @param {number} millis
  * @return {Promise}
  */
 async function sleep(millis) {
 
-    var delay = (millis) => {
-        var date = new Date();
-        while (new Date() - date < millis) { }
-    };
+    // var delay = (millis) => {
+    //     var date = new Date();
+    //     while (new Date() - date < millis) { }
+    // };
 
 
     return new Promise ((resolve) => { 
-        delay(millis); 
-        resolve("anything")
+        setTimeout (resolve, millis);
+        // resolve("anything")
 
     }); 
 

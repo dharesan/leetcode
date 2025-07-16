@@ -1,4 +1,4 @@
-# Last updated: 16/07/2025, 19:13:36
+# Last updated: 16/07/2025, 19:15:07
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
 
@@ -60,35 +60,35 @@ class Solution:
 
 
         """
-        dictResult = {}
-        for alphabet in nums: 
-            if alphabet in dictResult: 
-                dictResult [alphabet] += 1
-            else: 
-                dictResult [alphabet] = 1 
+#         dictResult = {}
+#         for alphabet in nums: 
+#             if alphabet in dictResult: 
+#                 dictResult [alphabet] += 1
+#             else: 
+#                 dictResult [alphabet] = 1 
 
-        keyHolder = []
-        for key in dictResult.keys(): 
-            keyHolder.append(key)
+#         keyHolder = []
+#         for key in dictResult.keys(): 
+#             keyHolder.append(key)
         
-        print(keyHolder)
+#         print(keyHolder)
 
-        memory = {}
+#         memory = {}
 
 
-        for index in range(len(keyHolder)): 
+#         for index in range(len(keyHolder)): 
             
-            memory [keyHolder[index]] = tempCalc 
+#             memory [keyHolder[index]] = tempCalc 
 
 
 
             
 
     
-        # Brute force is O(n^2)
+#         # Brute force is O(n^2)
 
 
-        # DP 
-        # Sort first --> result can be shared for repeating 
-"""
-"""
+#         # DP 
+#         # Sort first --> result can be shared for repeating 
+# """
+# """
